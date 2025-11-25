@@ -19,5 +19,5 @@ My current ideas for how to adapt the Jurassic Park scene into Bitsy are:
 5. Leave the Vent
 6. The Raptors will have changed position, with Tim by the Freezer door and the Raptor in the Freezer
 7. Go to the Freezer and help Tim to lock the Raptor in
-8. Go to the exit where the Raptors first came from to escape 
+8. Go to the exit where the Raptors first came from to escape and end game
 

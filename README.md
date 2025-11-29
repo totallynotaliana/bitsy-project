@@ -12,12 +12,13 @@ My current ideas for how to adapt the Jurassic Park scene into Bitsy are:
 - Having objects that you can pick up that'll trigger dialogue to play
 
 ## Potential outline
-1. Talk to Tim who is next to you to trigger dialogue
-2. Move through the ailes in the kitchen
-3. Touch collectible bubbles that trigger the Raptor noises
-4. Go into the vent/oven thing and pick up another collectable bubble that triggers dialogue
-5. Leave the Vent
-6. The Raptors will have changed position, with Tim by the Freezer door and the Raptor in the Freezer
-7. Go to the Freezer and help Tim to lock the Raptor in
-8. Go to the exit where the Raptors first came from to escape and end game
+1. Pick up the blob next to you to trigger dialogue
+2. Check on Tim
+3. Move through the ailes in the kitchen
+4. Touch collectible bubbles that trigger the Raptor noises
+5. Go into the vent/oven thing and pick up another collectable bubble that triggers dialogue
+6. Leave the Vent
+7. The Raptors will have changed position, with Tim by the Freezer door and the Raptor in the Freezer
+8. Go to the Freezer and help Tim to lock the Raptor in
+9. Go to the exit where the Raptors first came from to escape and end game
 

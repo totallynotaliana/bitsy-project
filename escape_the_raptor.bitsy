@@ -22,7 +22,7 @@ PAL 1
 ROOM 0
 a,a,a,a,a,a,a,a,a,a,a,a,d,d,a,a
 e,0,0,b,b,b,b,b,b,b,b,b,0,0,0,a
-e,0,0,0,0,0,0,0,0,0,0,0,0,0,b,a
+e,0,0,0,f,0,0,0,0,0,f,0,0,0,b,a
 a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
 a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
 a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
@@ -33,11 +33,14 @@ a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
 a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
 a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
 a,0,0,b,c,0,0,b,0,0,b,b,0,0,b,a
-a,0,0,0,0,0,0,0,0,0,0,0,0,0,b,a
+a,0,f,0,0,0,0,f,0,0,0,0,0,0,b,a
 a,b,b,b,b,b,b,b,b,b,b,b,b,b,b,a
 a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a
 NAME Raptors entering Kitchen 
+ITM 0 9,11
+ITM 2 9,3
 PAL 0
+TUNE 3
 
 TIL a
 11111111
@@ -66,8 +69,8 @@ WAL true
 TIL c
 11111111
 11111111
-111111111
-100000011
+11111111
+10000001
 10000001
 10000001
 10000001
@@ -96,6 +99,18 @@ TIL e
 01111110
 01111110
 NAME Freezer door
+WAL true
+
+TIL f
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME Invisible wall
 WAL true
 
 SPR A
@@ -164,16 +179,38 @@ SPR c
 NAME Raptor B
 POS 0 12,2
 
+SPR d
+00000000
+00111000
+00001000
+00011000
+00010000
+00000000
+00010000
+00000000
+>
+00000000
+00000000
+00000000
+00111000
+00001000
+00011000
+00000000
+00010000
+NAME Lex's thoughts
+DLG 4
+POS 0 5,8
+
 ITM 0
 00000000
 00000000
 00000000
-00111100
-01100100
-00100100
+00000000
+00011000
 00011000
 00000000
-NAME tea
+00000000
+NAME Lex
 DLG 1
 
 ITM 1
@@ -189,20 +226,53 @@ NAME key
 DLG 2
 BLIP 2
 
+ITM 2
+00000000
+00000000
+00000000
+00000000
+00011000
+00011000
+00000000
+00000000
+NAME raptor noise
+DLG 3
+BLIP 1
+
 DLG 0
-I'm a cat
-NAME cat dialog
+"""
+{
+  - talkcount >= 1 ?
+    We have to get out of here!!
+  - else ?
+    It's a Velociraptor!!
+}{talkcount = talkcount + 1}
+"""
+NAME Tim dialog
 
 DLG 1
-You found a nice warm cup of tea
+Follow me...
 NAME tea dialog
 
 DLG 2
 A key! {wvy}What does it open?{wvy}
 NAME key dialog
 
-VAR a
-42
+DLG 3
+*Raptor noises*
+NAME item 2 dialog
+
+DLG 4
+"""
+{cycle
+  - Maybe If I get to the end of these tables...
+  - ... I can distract the Raptors from getting to Tim
+}
+"""
+NAME Lex's thoughts dialog
+
+VAR talkcount
+0
 
 TUNE 2
 2F#,0,G,0,A,0,F#,0,2E,0,F#,E,4D,0,0,0
@@ -258,11 +328,12 @@ TMP MED
 SQR P4 P4
 
 BLIP 1
-E5,B5,B5
-NAME meow
-ENV 40 99 4 185 138
-BEAT 61 115
-SQR P2
+F5,C5,A#
+NAME Raptor noise
+ENV 50 95 6 105 137
+BEAT 64 115
+SQR P4
+RPT 1
 
 BLIP 2
 D5,E5,D5

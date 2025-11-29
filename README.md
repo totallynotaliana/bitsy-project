@@ -14,7 +14,7 @@ My current ideas for how to adapt the Jurassic Park scene into Bitsy are:
 ## Potential outline
 1. Talk to Tim to trigger dialogue
 2. Pick up the blob next to you to trigger more dialogue
-3. You can keep talking to Tim if you wish
+3. You can keep talking to Tim if you wish (reccomend that you do)
 4. Move through the ailes in the kitchen
 5. Touch collectible bubbles that trigger the Raptor noises
 6. Go into the vent/oven thing and pick up another collectable bubble that triggers dialogue

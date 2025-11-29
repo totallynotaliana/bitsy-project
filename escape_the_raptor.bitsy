@@ -15,11 +15,57 @@ PAL 0
 NAME blueprint
 
 PAL 1
-255,0,123
-143,255,248
+13,1,28
+134,138,182
 136,66,255
 
 ROOM 0
+a,a,a,a,a,a,a,a,a,a,a,a,d,d,a,a
+e,0,0,b,b,b,b,b,b,b,b,b,0,0,0,a
+e,0,0,0,f,0,0,0,0,0,f,0,0,0,b,a
+a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
+a,0,0,b,c,0,b,b,b,0,b,b,0,0,b,a
+a,0,f,0,0,0,0,f,0,0,0,0,0,0,b,a
+a,b,b,b,b,b,b,b,b,b,b,b,b,b,b,a
+a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a
+NAME Raptors entering Kitchen 
+ITM 0 9,11
+ITM 2 9,3
+EXT 4,12 1 4,12
+PAL 0
+TUNE 3
+
+ROOM 1
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,a,a,a,a,a,a,0,0,0,0,0,0,0,0,0
+0,a,0,0,0,0,a,0,0,0,0,0,0,0,0,0
+0,a,0,0,c,0,a,0,0,0,0,0,0,0,0,0
+0,a,0,0,0,0,a,0,0,0,0,0,0,0,0,0
+0,a,a,a,a,a,a,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Cabinet
+ITM 3 4,13
+EXT 4,12 2 4,13
+PAL 1
+
+ROOM 2
 a,a,a,a,a,a,a,a,a,a,a,a,d,d,a,a
 e,0,0,b,b,b,b,b,b,b,b,b,0,0,0,a
 e,0,0,0,f,0,0,0,0,0,f,0,0,0,b,a
@@ -36,7 +82,7 @@ a,0,0,b,c,0,0,b,0,0,b,b,0,0,b,a
 a,0,f,0,0,0,0,f,0,0,0,0,0,0,b,a
 a,b,b,b,b,b,b,b,b,b,b,b,b,b,b,a
 a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a
-NAME Raptors entering Kitchen 
+NAME Time to escape
 ITM 0 9,11
 ITM 2 9,3
 PAL 0
@@ -76,6 +122,7 @@ TIL c
 10000001
 11111111
 NAME Cabinet
+WAL false
 
 TIL d
 01111110
@@ -239,6 +286,18 @@ NAME raptor noise
 DLG 3
 BLIP 1
 
+ITM 3
+00000000
+00000000
+00000000
+00000000
+00011000
+00011000
+00000000
+00000000
+NAME action
+DLG 5
+
 DLG 0
 """
 {
@@ -246,6 +305,9 @@ DLG 0
     We have to get out of here!!
   - else ?
     It's a Velociraptor!!
+}{
+  - talkcount == 3 ?
+    {pg}I found this key, maybe you can use it for something?{item "1" 1}
 }{talkcount = talkcount + 1}
 """
 NAME Tim dialog
@@ -270,6 +332,10 @@ DLG 4
 }
 """
 NAME Lex's thoughts dialog
+
+DLG 5
+*Lex starts slamming the cabinet door*
+NAME action dialog
 
 VAR talkcount
 0
@@ -341,4 +407,12 @@ NAME pick up key
 ENV 99 65 6 96 152
 BEAT 95 0
 SQR P4
+
+BLIP 3
+F#5,E,D5
+NAME slamming
+ENV 117 65 5 248 156
+BEAT 74 35
+SQR P4
+RPT 1
 

@@ -20,26 +20,26 @@ PAL 1
 136,66,255
 
 ROOM 0
-a,a,a,a,a,a,a,a,a,a,a,a,d,d,a,a
+a,a,a,a,a,a,a,a,a,a,a,a,a,d,a,a
 e,0,0,b,b,b,b,b,b,b,b,b,0,0,0,a
-e,0,0,0,f,0,0,0,0,0,f,0,0,0,b,a
-a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
-a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
-a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
-a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
-a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
-a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
-a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
-a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
-a,0,0,b,b,0,b,b,b,0,b,b,0,0,b,a
-a,0,0,b,c,0,b,b,b,0,b,b,0,0,b,a
+a,0,0,0,f,0,0,0,0,0,f,0,0,0,b,a
+a,0,0,b,b,0,0,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,0,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,0,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,0,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,0,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,0,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,0,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,0,b,b,0,b,b,0,0,b,a
+a,0,0,b,b,0,0,b,b,0,b,b,0,0,b,a
+a,0,0,b,c,0,0,b,b,0,b,b,0,0,b,a
 a,0,f,0,0,0,0,f,0,0,0,0,0,0,b,a
 a,b,b,b,b,b,b,b,b,b,b,b,b,b,b,a
 a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a
 NAME Raptors entering Kitchen 
 ITM 0 9,11
 ITM 2 9,3
-EXT 4,12 1 4,12
+EXT 4,12 1 4,12 FX tunnel DLG 6
 PAL 0
 TUNE 3
 
@@ -66,9 +66,10 @@ EXT 4,12 2 4,13
 PAL 1
 
 ROOM 2
-a,a,a,a,a,a,a,a,a,a,a,a,d,d,a,a
+a,a,a,a,a,a,a,a,a,a,a,a,a,d,a,a
 e,0,0,b,b,b,b,b,b,b,b,b,0,0,0,a
-e,0,0,0,f,0,0,0,0,0,f,0,0,0,b,a
+a,0,0,0,0,0,0,0,0,0,0,0,0,0,b,a
+a,0,0,b,b,f,f,b,f,f,b,b,0,0,b,a
 a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
 a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
 a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
@@ -77,16 +78,15 @@ a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
 a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
 a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
 a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
-a,0,0,b,b,0,0,b,0,0,b,b,0,0,b,a
-a,0,0,b,c,0,0,b,0,0,b,b,0,0,b,a
-a,0,f,0,0,0,0,f,0,0,0,0,0,0,b,a
+a,0,0,b,c,f,f,b,f,f,b,b,f,f,b,a
+a,0,0,0,0,0,0,f,0,0,0,0,0,0,b,a
 a,b,b,b,b,b,b,b,b,b,b,b,b,b,b,a
 a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a
 NAME Time to escape
-ITM 0 9,11
-ITM 2 9,3
+ITM 4 2,10
+END a 13,0
 PAL 0
-TUNE 3
+TUNE 2
 
 TIL a
 11111111
@@ -134,7 +134,7 @@ TIL d
 01111010
 01111110
 NAME door
-WAL true
+WAL false
 
 TIL e
 01111110
@@ -203,7 +203,7 @@ SPR b
 01010010
 01010000
 NAME Raptor A
-POS 0 13,1
+POS 0 12,2
 
 SPR c
 00000000
@@ -224,7 +224,7 @@ SPR c
 01010010
 01010000
 NAME Raptor B
-POS 0 12,2
+POS 0 13,1
 
 SPR d
 00000000
@@ -247,6 +247,52 @@ SPR d
 NAME Lex's thoughts
 DLG 4
 POS 0 5,8
+BLIP 2
+
+SPR e
+00000000
+00000111
+10000111
+10111111
+11111000
+01111110
+01010010
+01010000
+>
+00000101
+01001000
+10000111
+10111110
+01111111
+01111000
+01010110
+01010010
+NAME Raptor A 2
+DLG 7
+POS 2 5,13
+BLIP 1
+
+SPR f
+00000000
+00000000
+00111100
+00111100
+00011000
+00111100
+01011010
+00011000
+>
+00000000
+00000000
+00111100
+00111100
+00011000
+01111000
+00011000
+00011000
+NAME Tim 2
+DLG 8
+POS 2 1,1
 
 ITM 0
 00000000
@@ -298,6 +344,18 @@ ITM 3
 NAME action
 DLG 5
 
+ITM 4
+00000000
+00000000
+00000000
+00011000
+00011000
+00000000
+00000000
+00000000
+NAME blob
+DLG 9
+
 DLG 0
 """
 {
@@ -337,14 +395,41 @@ DLG 5
 *Lex starts slamming the cabinet door*
 NAME action dialog
 
+DLG 6
+"""
+{
+  - {item "1"} >= 1 ?
+    {property locked false}The key opens the cabinet!
+  - else ?
+    {property locked true}The cabinet is locked...
+}
+"""
+NAME locked exit 1
+
+DLG 7
+*Pain noises*
+NAME Raptor A 2 dialog
+
+DLG 8
+Help me close the door!
+NAME Tim 2 dialog
+
+DLG 9
+I have to go help Tim!
+NAME blob dialog
+
+DLG a
+You and Tim are safe!! Good work
+NAME ending 1
+
 VAR talkcount
 0
 
 TUNE 2
-2F#,0,G,0,A,0,F#,0,2E,0,F#,E,4D,0,0,0
+F#,0,G,0,C,0,F#,0,E,0,F#,E,0,C,0,D
 2D,0,E,0,F#,0,D,0,2C,0,2G3,0,2F#3,0,D2,0
 >
-0,0,2G,0,A,0,B,0,2C5,0,B,A,G,0,G,0
+0,0,G,0,A,0,B,D,E,F,0,C#,0,0,G,0
 2G2,0,D,D5,G3,G,D,0,2C2,0,E,E5,C3,C,E5,0
 >
 2D,0,C5,B,A,0,A,0,4A,0,0,0,F#,0,0,0
@@ -366,14 +451,17 @@ TMP FST
 SQR P4 P2
 
 TUNE 3
-3F5,0,0,A#,0,2C#5,0,A#,3F5,0,0,F#5,0,0,2F5,0
+F5,0,F5,A#,0,2C#5,0,A#,F5,0,F5,F#5,0,0,0,F5
 A#3,C#,F,0,0,F,C#,F,A#3,C#,F,A#,0,A#,C#,F
 >
-3F5,0,0,A,0,2C#5,0,A,3F5,0,0,2A#5,0,A#,D#5,0
+F5,0,F5,A,0,2C#5,0,A,2F5,0,C,0,0,0,D#5,0
 A3,C#,F,A3,0,F,C#,F,A,C#,F,0,D#,0,C#5,0
 >
 4F5,0,0,0,G#,2C#5,0,G#,3F5,0,0,D#5,0,F5,2C#5,0
 G#3,C#,F,3F#,0,0,2F,0,G#3,C#,F,F#,B,A,F,D#
+>
+A#,0,A#3,0,C#,0,F,0,A#,0,0,0,0,0,0,0
+A#2,0,C#3,0,F3,0,A#3,0,D,0,0,0,0,F#3,0,F3
 >
 4D#5,0,0,0,0,0,2A#,0,4A#,0,0,0,0,0,A#,C5
 G3,D#,F,G,0,D#,F,G,G3,D#,G,F,0,F,D#,C#3
@@ -386,9 +474,6 @@ F2,D#3,A3,0,0,F3,C#,0,F#2,A#3,D#3,0,0,F#3,C#,C
 >
 3A#,0,0,0,C5,0,C#5,0,A#,0,C#,D#,G#,G#3,0,C#3
 C3,A#3,C,E,A,0,A#,0,0,B2,B3,0,2F,0,0,0
->
-A#,0,A#3,0,C#,0,F,0,A#,0,0,0,0,0,0,0
-A#2,0,C#3,0,F3,0,A#3,0,D,0,0,0,0,F#3,0,F3
 NAME rhythmic ruins
 TMP MED
 SQR P4 P4
